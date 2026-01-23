@@ -16,7 +16,11 @@ lastFacing = 1
 
 stateFree = function() {
 	//Velocidade horizontal
-	var _hspd = (keyboard_check(vk_right) - keyboard_check(vk_left)) * mspd
+	var leftKey = keyboard_check(vk_left) or keyboard_check(ord("A"))
+	var rightKey = keyboard_check(vk_right) or keyboard_check(ord("D"))
+	var jumpKey = keyboard_check(vk_up) or keyboard_check(vk_space) or keyboard_check(ord("W"))
+	var jumpKeyPress = keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space) or keyboard_check_pressed(ord("W"))
+	var _hspd = (rightKey - leftKey) * mspd
 	
 	if !place_meeting(x,y+1,objCol)
 	hspd = lerp(hspd,_hspd,0.2)
@@ -30,7 +34,7 @@ stateFree = function() {
 	if place_meeting(x,y+1,objCol)
 	vspd = 0
 	
-	if (keyboard_check(vk_up) && place_meeting(x,y+1,objCol)) or (global.forcejump = 1) {
+	if (jumpKey && place_meeting(x,y+1,objCol)) or (global.forcejump = 1) {
 	audio_play_sound(jump,0,0,0.5)
 	if !global.forcejump = 1
 		vspd = -jspd
@@ -39,7 +43,7 @@ stateFree = function() {
 	global.forcejump=0
 	}
 	
-	if !keyboard_check(vk_up) && vspd<grav
+	if !jumpKey && vspd<grav
 	vspd += grav
 	
 	if place_meeting(x,y-1,objCol)
@@ -68,7 +72,7 @@ stateFree = function() {
 	manageSprites()
 	
 	//WallJump
-	if place_meeting(x+lastFacing, y, objCol) && keyboard_check_pressed(vk_up) && !place_meeting(x, y+1, objCol) {
+	if place_meeting(x+lastFacing, y, objCol) && jumpKeyPress && !place_meeting(x, y+1, objCol) {
 		vspd = -jspd
 		hspd = -5 * lastFacing
 		audio_play_sound(jump,0,0,0.5)

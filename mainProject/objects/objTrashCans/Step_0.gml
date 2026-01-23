@@ -3,7 +3,7 @@ if place_meeting(x,y, objPlayer) {
 		instance_create_depth(x,y,0,objKeyUp)
 		createInstance = 1
 	}
-	if keyboard_check_pressed(vk_up) 
+	if keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"))
 		room_goto_next()
 }
 else {

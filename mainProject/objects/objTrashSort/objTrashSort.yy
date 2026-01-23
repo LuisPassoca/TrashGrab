@@ -36,5 +36,5 @@
     "path":"sprites/sprPlaceHolder/sprPlaceHolder.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -1,4 +1,7 @@
-move = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up)
+var upKey = keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"))
+var downKey = keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"))
+
+move = downKey - upKey
 
 buttonIndex += move
 
@@ -13,7 +16,7 @@ if buttonIndex > buttons-1
 	buttonIndex = 0
 	
 //Executa a ação do botão qdo se pressiona enter
-if keyboard_check_pressed(vk_enter)
+if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_space)
 	switch buttonIndex {
 		case 0: //start
 		room_goto_next()
