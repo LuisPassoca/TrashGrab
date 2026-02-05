@@ -33,3 +33,4 @@ Agora você pode finalmente jogar o jogo e se divertir reciclando.
 <br>
 <img width="64" height="64" alt="image" src="https://github.com/user-attachments/assets/08cd2f9b-8f60-4187-8db6-4d5aba03c995" />
 
+
