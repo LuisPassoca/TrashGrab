@@ -52,11 +52,11 @@ Agora você pode finalmente jogar o jogo e se divertir reciclando.
 <img width="64" height="64" alt="image" src="https://github.com/user-attachments/assets/08cd2f9b-8f60-4187-8db6-4d5aba03c995" />
 
 ## Nossa equipe:
-* [@LuisPassoca](https://github.com/LuisPassoca): programação e trilha sonora
-* [@SouzaTXT](https://github.com/SouzaTXT): arte, efeitos sonoros e documentação
-* [@KesleyMarco](https://github.com/KesleyMarco): arte, efeitos sonoros e documentação
-* [@DiogoHHarada](https://github.com/DiogoHHarada): documentação e artes adicionais
-* [@Felpzzcr7](https://github.com/Felpzzcr7): documentação e artes adicionais
+* [@LuisPassoca](https://github.com/LuisPassoca)
+* [@SouzaTXT](https://github.com/SouzaTXT)
+* [@KesleyMarco](https://github.com/KesleyMarco)
+* [@DiogoHHarada](https://github.com/DiogoHHarada)
+* [@Felpzzcr7](https://github.com/Felpzzcr7)
 
 ## Galeria:
 <div align='center'>
